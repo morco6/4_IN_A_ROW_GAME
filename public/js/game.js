@@ -152,7 +152,8 @@ class game {
         }
 
         document.getElementById("section").appendChild(matrixDOM);
-        matrixDOM.addEventListener("click", e => this.playTurn(parseInt(event.path[1].id)), false);
+
+        matrixDOM.addEventListener("click", e => this.playTurn(parseInt(event.srcElement.parentNode.id)), false);
 
     }
 
